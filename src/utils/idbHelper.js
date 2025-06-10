@@ -379,7 +379,7 @@ export const syncPendingPlanningData = async () => {
       try {
         // Remove the id and syncStatus before sending to server
         const { id, syncStatus, ...formData } = item;
-        await api.post("/planning", formData);
+        await api.post("/save-planning-screen-detail", formData);
         successfulSubmissions.push(id);
       } catch (error) {
         console.error(`Failed to sync planning item ${item.id}:`, error);
@@ -456,7 +456,7 @@ export const syncPendingDamageFiberData = async () => {
     for (const item of pendingItems) {
       try {
         const { id, syncStatus, ...payload } = item;
-        await api.post('/damage-fibers', payload);
+        await api.post('/save-damage-fiber-detail', payload);
         successfulSyncs.push(id);
       } catch (error) {
         console.error(`Sync failed for damage fiber ${item.id}:`, error);
@@ -558,7 +558,7 @@ export const syncPendingExistingFiberData = async () => {
     for (const item of pendingItems) {
       try {
         const { id, syncStatus, createdAt, updatedAt, ...payload } = item;
-        await api.post('/existing-fibers', payload);
+        await api.post('/save-existing-fiber-detail', payload);
         successfulSyncs.push(id);
       } catch (error) {
         console.error(`Sync failed for existing fiber ${item.id}:`, error);

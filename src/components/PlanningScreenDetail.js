@@ -323,7 +323,7 @@ const PlanningScreenDetail = () => {
     if (isOnline && isOnline?.isOnline === true) {
       try {
         const response = await api.post(
-          `/planning-screen/${block_id}`,
+          `/save-planning-screen-detail`,
           formDataObject
         );
         toast.success("Planning details submitted successfully!");

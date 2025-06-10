@@ -241,7 +241,7 @@ const DamageFiberDetail = () => {
 
     if (isOnline) {
       try {
-        const response = await api.post("/damage-fiber", formDataObject);
+        const response = await api.post("/save-damage-fiber-detail", formDataObject);
         toast.success("Damage fiber details submitted successfully!");
         setImages([]);
         e.target.reset();

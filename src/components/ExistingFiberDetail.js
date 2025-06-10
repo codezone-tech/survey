@@ -246,8 +246,7 @@ const ExistingFiberDetail = () => {
     if (isOnline) {
       try {
         const response = await api.post(
-          `/existing-fiber-details/${district_id}/${block_id}`,
-          formDataObject
+          `/save-existing-fiber-detail`, formDataObject
         );
         toast.success("Fiber details submitted successfully!");
         setImages([]);

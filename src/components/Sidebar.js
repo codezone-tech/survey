@@ -91,9 +91,9 @@ const Sidebar = ({ onPageChange, isOpen, toggleSidebar, onLogout }) => {
             <i className="fas fa-globe"></i> GP Master Details
           </li>
 
-          <li onClick={() => onPageChange("OLTMasterDetail")}>
+          {/* <li onClick={() => onPageChange("OLTMasterDetail")}>
             <i className="fas fa-globe"></i> OLT Master Details
-          </li>
+          </li> */}
 
           <li onClick={() => onPageChange("ExistingFiberDetail")}>
             <i className="fas fa-book"></i> Existing Fiber Details
@@ -103,17 +103,17 @@ const Sidebar = ({ onPageChange, isOpen, toggleSidebar, onLogout }) => {
             <i className="fas fa-book"></i> Damage Fiber Details
           </li>
          
-          <li onClick={() => onPageChange("PlanningScreenDetail")}>
+          {/* <li onClick={() => onPageChange("PlanningScreenDetail")}>
             <i className="fas fa-book"></i> Planning Screen Details
-          </li>
+          </li> */}
           
-          <li onClick={() => onPageChange("settings")}>
+          {/* <li onClick={() => onPageChange("settings")}>
             <i className="fas fa-user"></i> Profile
           </li>
 
           <li onClick={() => onPageChange("settings")}>
             <i className="fas fa-cog"></i> Settings
-          </li>
+          </li> */}
           
           <li className="logout" onClick={confirmLogout}>
             <i className="fas fa-sign-out-alt"></i> Logout
